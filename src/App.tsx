@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, X, Send, User, Code, Award, Briefcase, Settings, Zap, Globe } from 'lucide-react'
+import { Mail, Phone, MapPin, Github, Linkedin, X, Send, Code, Briefcase, Settings, Globe } from 'lucide-react'
 
 function App() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false)
