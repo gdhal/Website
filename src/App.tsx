@@ -29,17 +29,17 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
       {/* Header */}
-      <header className="section-padding py-6 glass-effect fixed w-full top-0 z-40">
+      <header className="section-padding py-6 glass-effect fixed w-full top-0 z-40 animate-slide-in-left">
         <div className="container-max">
           <nav className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold gradient-text">Gurvir Dhaliwal</h1>
+            <h1 className="text-2xl font-bold gradient-text animate-gradient bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-[length:200%_200%]">Gurvir Dhaliwal</h1>
             <div className="flex space-x-6">
-              <a href="#about" className="text-gray-600 hover:text-blue-600 transition-colors">About</a>
-              <a href="#skills" className="text-gray-600 hover:text-blue-600 transition-colors">Skills</a>
-              <a href="#experience" className="text-gray-600 hover:text-blue-600 transition-colors">Experience</a>
+              <a href="#about" className="text-gray-600 hover:text-blue-600 transition-all duration-300 hover:scale-110">About</a>
+              <a href="#skills" className="text-gray-600 hover:text-blue-600 transition-all duration-300 hover:scale-110">Skills</a>
+              <a href="#experience" className="text-gray-600 hover:text-blue-600 transition-all duration-300 hover:scale-110">Experience</a>
               <button 
                 onClick={() => setIsContactModalOpen(true)}
-                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all duration-300 hover:scale-105 hover:shadow-lg"
               >
                 Contact
               </button>
@@ -53,27 +53,27 @@ function App() {
         <div className="container-max">
           <div className="text-center animate-fade-in">
             <div className="mb-8">
-              <div className="w-32 h-32 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-8 flex items-center justify-center">
-                <Settings className="w-16 h-16 text-white" />
+              <div className="w-32 h-32 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-8 flex items-center justify-center animate-bounce-in hover-glow animate-float">
+                <Settings className="w-16 h-16 text-white animate-rotate-slow" />
               </div>
-              <h2 className="text-5xl font-bold gradient-text mb-4">
+              <h2 className="text-5xl font-bold gradient-text mb-4 animate-scale-in">
                 Gurvir Dhaliwal
               </h2>
-              <p className="text-2xl text-gray-700 font-medium mb-4">
+              <p className="text-2xl text-gray-700 font-medium mb-4 animate-slide-in-left">
                 Embedded Mechatronics • Robotics • Factory Automation
               </p>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto animate-slide-in-right">
                 Technical sales professional with 6+ years at Electromate, specializing in industrial automation equipment. 
                 Former Senior R&D Technologist at LMI Technologies with expertise in 3D imaging sensors and embedded systems.
               </p>
-              <div className="flex justify-center space-x-4">
-                <a href="#" className="p-3 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div className="flex justify-center space-x-4 animate-stagger-1">
+                <a href="#" className="p-3 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover-lift hover-glow">
                   <Github className="w-6 h-6 text-gray-700" />
                 </a>
-                <a href="#" className="p-3 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <a href="#" className="p-3 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover-lift hover-glow">
                   <Linkedin className="w-6 h-6 text-gray-700" />
                 </a>
-                <a href="https://electromate.com" className="p-3 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <a href="https://electromate.com" className="p-3 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover-lift hover-glow">
                   <Globe className="w-6 h-6 text-gray-700" />
                 </a>
               </div>
@@ -86,8 +86,8 @@ function App() {
       <section id="about" className="section-padding py-20 bg-white">
         <div className="container-max">
           <div className="text-center mb-16">
-            <h3 className="text-4xl font-bold gradient-text mb-4">About Me</h3>
-            <p className="text-gray-600 max-w-3xl mx-auto">
+            <h3 className="text-4xl font-bold gradient-text mb-4 animate-scale-in">About Me</h3>
+            <p className="text-gray-600 max-w-3xl mx-auto animate-fade-in">
               I'm an embedded mechatronics engineer with a passion for robotics and factory automation. 
               With dual diplomas from BCIT in Electrical & Computer Engineering Technology, I bring both 
               technical depth and business acumen to complex automation challenges.
@@ -95,18 +95,18 @@ function App() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6 rounded-xl glass-effect animate-slide-up">
-              <Briefcase className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+            <div className="text-center p-6 rounded-xl glass-effect animate-stagger-1 hover-lift hover-glow">
+              <Briefcase className="w-12 h-12 text-blue-600 mx-auto mb-4 animate-bounce-in" />
               <h4 className="text-xl font-semibold mb-2">Technical Sales</h4>
               <p className="text-gray-600">6+ years of technical sales and field support for industrial automation equipment, liaising with engineers on high-value contracts.</p>
             </div>
-            <div className="text-center p-6 rounded-xl glass-effect animate-slide-up">
-              <Code className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+            <div className="text-center p-6 rounded-xl glass-effect animate-stagger-2 hover-lift hover-glow">
+              <Code className="w-12 h-12 text-purple-600 mx-auto mb-4 animate-bounce-in" />
               <h4 className="text-xl font-semibold mb-2">R&D Innovation</h4>
               <p className="text-gray-600">Senior R&D Technologist experience developing and prototyping advanced 3D imaging sensors at LMI Technologies.</p>
             </div>
-            <div className="text-center p-6 rounded-xl glass-effect animate-slide-up">
-              <Settings className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
+            <div className="text-center p-6 rounded-xl glass-effect animate-stagger-3 hover-lift hover-glow">
+              <Settings className="w-12 h-12 text-indigo-600 mx-auto mb-4 animate-bounce-in" />
               <h4 className="text-xl font-semibold mb-2">Systems Integration</h4>
               <p className="text-gray-600">Custom systems design and integration expertise, with 3+ years of self-employment serving local businesses.</p>
             </div>
@@ -118,14 +118,14 @@ function App() {
       <section id="skills" className="section-padding py-20">
         <div className="container-max">
           <div className="text-center mb-16">
-            <h3 className="text-4xl font-bold gradient-text mb-4">Technical Skills</h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <h3 className="text-4xl font-bold gradient-text mb-4 animate-scale-in">Technical Skills</h3>
+            <p className="text-gray-600 max-w-2xl mx-auto animate-fade-in">
               Core competencies spanning embedded systems, industrial automation, and software development.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 animate-stagger-1 hover-lift">
               <h4 className="font-semibold text-lg mb-3 text-blue-600">Programming & Embedded</h4>
               <div className="space-y-2">
                 <div className="flex justify-between">
@@ -147,7 +147,7 @@ function App() {
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 animate-stagger-2 hover-lift">
               <h4 className="font-semibold text-lg mb-3 text-purple-600">Industrial & Automation</h4>
               <div className="space-y-2">
                 <div className="flex justify-between">
@@ -169,7 +169,7 @@ function App() {
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 animate-stagger-3 hover-lift">
               <h4 className="font-semibold text-lg mb-3 text-indigo-600">Software & Systems</h4>
               <div className="space-y-2">
                 <div className="flex justify-between">
@@ -191,7 +191,7 @@ function App() {
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 animate-stagger-4 hover-lift">
               <h4 className="font-semibold text-lg mb-3 text-orange-600">Professional Skills</h4>
               <div className="space-y-2">
                 <div className="flex justify-between">
@@ -213,7 +213,7 @@ function App() {
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 animate-stagger-5 hover-lift">
               <h4 className="font-semibold text-lg mb-3 text-red-600">Education</h4>
               <div className="space-y-3">
                 <div>
@@ -227,7 +227,7 @@ function App() {
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 animate-stagger-6 hover-lift">
               <h4 className="font-semibold text-lg mb-3 text-green-600">Certifications & Activities</h4>
               <div className="space-y-2">
                 <div className="text-sm">• Active IEEE Member</div>
@@ -244,14 +244,14 @@ function App() {
       <section id="experience" className="section-padding py-20 bg-white">
         <div className="container-max">
           <div className="text-center mb-16">
-            <h3 className="text-4xl font-bold gradient-text mb-4">Professional Experience</h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <h3 className="text-4xl font-bold gradient-text mb-4 animate-scale-in">Professional Experience</h3>
+            <p className="text-gray-600 max-w-2xl mx-auto animate-fade-in">
               A track record of technical excellence and business impact across multiple industries.
             </p>
           </div>
           
           <div className="space-y-8">
-            <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+            <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden animate-slide-in-left hover-lift">
               <div className="p-8">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div>
@@ -276,7 +276,7 @@ function App() {
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+            <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden animate-slide-in-right hover-lift">
               <div className="p-8">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div>
@@ -301,7 +301,7 @@ function App() {
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+            <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden animate-slide-in-left hover-lift">
               <div className="p-8">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div>
@@ -327,14 +327,14 @@ function App() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6">
+              <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 animate-stagger-1 hover-lift">
                 <h4 className="text-xl font-semibold mb-2">Sales Associate</h4>
                 <p className="text-lg text-orange-600 font-medium mb-2">The Home Depot</p>
                 <p className="text-gray-600 mb-3">Aug 2009 – Nov 2013 • Surrey, BC</p>
                 <p className="text-gray-700">Customer support and product demonstrations in home improvement retail</p>
               </div>
 
-              <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6">
+              <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 animate-stagger-2 hover-lift">
                 <h4 className="text-xl font-semibold mb-2">Assistant Manager</h4>
                 <p className="text-lg text-green-600 font-medium mb-2">Sam's Distributors</p>
                 <p className="text-gray-600 mb-3">Jun 2007 – May 2008 • Fresno, CA</p>
@@ -349,28 +349,28 @@ function App() {
       <footer className="section-padding py-12 bg-gray-900 text-white">
         <div className="container-max">
           <div className="text-center">
-            <h4 className="text-2xl font-bold mb-4">Let's Connect</h4>
-            <p className="text-gray-400 mb-8">
+            <h4 className="text-2xl font-bold mb-4 animate-fade-in">Let's Connect</h4>
+            <p className="text-gray-400 mb-8 animate-slide-up">
               I'm always open to discussing new opportunities in embedded systems, robotics, and industrial automation.
             </p>
             <button 
               onClick={() => setIsContactModalOpen(true)}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg animate-pulse-slow"
             >
               Get In Touch
             </button>
             <div className="flex justify-center space-x-6 mt-8">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#" className="text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 animate-stagger-1">
                 <Github className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#" className="text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 animate-stagger-2">
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="https://electromate.com" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://electromate.com" className="text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 animate-stagger-3">
                 <Globe className="w-6 h-6" />
               </a>
             </div>
-            <p className="text-gray-400 mt-8 text-sm">
+            <p className="text-gray-400 mt-8 text-sm animate-fade-in">
               © 2024 Gurvir Dhaliwal. All rights reserved.
             </p>
           </div>
@@ -379,14 +379,14 @@ function App() {
 
       {/* Contact Modal */}
       {isContactModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-xl shadow-xl max-w-md w-full animate-slide-up">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 animate-fade-in">
+          <div className="bg-white rounded-xl shadow-xl max-w-md w-full animate-scale-in hover-glow">
             <div className="p-6">
               <div className="flex justify-between items-center mb-6">
                 <h3 className="text-2xl font-bold gradient-text">Contact Me</h3>
                 <button 
                   onClick={() => setIsContactModalOpen(false)}
-                  className="text-gray-500 hover:text-gray-700"
+                  className="text-gray-500 hover:text-gray-700 transition-all duration-300 hover:scale-110 hover:rotate-90"
                 >
                   <X className="w-6 h-6" />
                 </button>
@@ -403,7 +403,7 @@ function App() {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
                     placeholder="Your name"
                   />
                 </div>
@@ -418,7 +418,7 @@ function App() {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -433,7 +433,7 @@ function App() {
                     onChange={handleInputChange}
                     required
                     rows={4}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none transition-all duration-300"
                     placeholder="Your message..."
                   />
                 </div>
@@ -442,13 +442,13 @@ function App() {
                   <button
                     type="button"
                     onClick={() => setIsContactModalOpen(false)}
-                    className="flex-1 px-4 py-2 text-gray-600 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+                    className="flex-1 px-4 py-2 text-gray-600 border border-gray-300 rounded-lg hover:bg-gray-50 transition-all duration-300 hover:scale-105"
                   >
                     Cancel
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center"
+                    className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 flex items-center justify-center hover:scale-105"
                   >
                     <Send className="w-4 h-4 mr-2" />
                     Send Message
